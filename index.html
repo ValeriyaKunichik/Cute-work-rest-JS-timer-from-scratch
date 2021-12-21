@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<body>
+  <div id="container">
+    <div id="app">
+      <div class="length-control">
+        <div id="title" class="main-title">WORK/REST TIMER</div>
+        <div class="time_controls">
+          <div id="break-label" class="time_control"> Break Length
+            <div> <button onClick="break_minus()" id="break-decrement"><i class="fa fa-arrow-down fa-2x"></i></button><span id="break-length">5</span>
+              <button onClick="break_plus()" id="break-increment"><i class="fa fa-arrow-up fa-2x"></i></button>
+
+            </div>
+          </div>
+
+          <div class="time_control" id="session-label"> Session Length
+            <div> <button onClick="session_minus()" id="session-decrement"><i class="fa fa-arrow-down fa-2x"></i></button><span id="session-length">25</span>
+              <button onClick="session_plus()" id="session-increment"><i class="fa fa-arrow-up fa-2x"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div>
+
+          <div class="timer" style="">
+            <div class="timer-wrapper">
+              <div id="timer-label">Session</div>
+              <time id="time-left"><span id="min">25</span>:<span id="sec">00</span></time>
+            </div>
+          </div>
+          <div>
+            <button id="start_stop"><i class="fa fa-play fa-2x"></i><i class="fa fa-pause fa-2x"></i></button>
+            <audio id="beep" autoplay>
+              <source src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav" type="audio/wav">
+            </audio>
+            <button onClick="reset()" id="reset"><i class="fa fa-refresh fa-2x"></i></button>
+          </div>
+          <div class="author">
+
+            Designed and Coded by <br />
+            <a>
+              Valerie Kunichik
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
